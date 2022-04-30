@@ -1,5 +1,6 @@
 <template>
-  <nav class="bg-black flex flex-row justify-center align-middle">
+
+  <nav class=" bg-gradient-to-t from-purple-200 to-purple-500 flex flex-row justify-center align-middle">
     <NavButton
       v-for="i in menu"
       :key="i.name"
@@ -7,7 +8,9 @@
       :url="i.url"
       :class="{ active: path === i.url }"
     />
+    
   </nav>
+
 </template>
 
 <script lang="ts">
@@ -22,9 +25,9 @@ export default defineComponent({
     const path = computed(() => route.path);
 
     const menu = [
-      { name: '/', url: '/' },
-      { name: 'FARM MANAGER', url: '/manager' },
-      { name: 'FARMER', url: '/farmer' },
+      { name: 'Home', url: '/' },
+      { name: 'Reward', url: '/reward' },
+      { name: 'Staking', url: '/farmer' },
     ];
 
     return {

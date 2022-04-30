@@ -1,15 +1,10 @@
 <template>
+
   <ConfigPane />
   <div v-if="!wallet" class="text-center">Pls connect (burner) wallet</div>
   <div v-else>
     <!--farm address-->
-    <div class="nes-container with-title mb-10">
-      <p class="title">Connect to a Farm</p>
-      <div class="nes-field mb-5">
-        <label for="farm">Farm address:</label>
-        <input id="farm" class="nes-input" v-model="farm" />
-      </div>
-    </div>
+
 
     <div v-if="farmerAcc">
       <FarmerDisplay
@@ -56,7 +51,7 @@
           End cooldown
         </button>
         <button class="nes-btn is-warning" @click="claim">
-          Claim {{ availableA }} A / {{ availableB }} B
+          Claim {{ availableA }} $HALO
         </button>
       </Vault>
     </div>
@@ -102,7 +97,7 @@ export default defineComponent({
     });
 
     // --------------------------------------- farmer details
-    const farm = ref<string>();
+    const farm = ref<string>(process.env.VUE_APP_GEM_FARM_PK || "");
     const farmAcc = ref<any>();
 
     const farmerIdentity = ref<string>();

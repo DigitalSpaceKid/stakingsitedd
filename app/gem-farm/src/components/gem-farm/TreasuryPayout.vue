@@ -14,7 +14,7 @@
         />
       </div>
       <div class="nes-field mb-5">
-        <label for="lamports">Amount to pay out (lamp):</label>
+        <label for="lamports">Amount to pay ou (lamp):</label>
         <input id="lamports" type="text" v-model="lamports" class="nes-input" />
       </div>
       <button class="mb-5 nes-btn is-primary" type="submit">Payout</button>
