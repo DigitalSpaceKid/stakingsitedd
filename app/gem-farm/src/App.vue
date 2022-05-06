@@ -1,5 +1,5 @@
 <template>
-  <div class="relative h-full min-h-screen ">
+  <div class="relative h-full min-h-screen bg-purple-100 ">
     
     <TheNavBar />
 

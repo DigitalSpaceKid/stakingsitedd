@@ -1,7 +1,7 @@
 <template>
 
   <ConfigPane />
-  <div v-if="!wallet" class="text-center">Pls connect (burner) wallet</div>
+  <div v-if="!wallet" class="text-center">Connect your wallet or paperhand anon</div>
   <div v-else>
     <!--farm address-->
 
@@ -27,7 +27,7 @@
           class="nes-btn is-primary mr-5"
           @click="addGems"
         >
-          Add Gems (resets staking)
+          Add Dogs (resets staking)
         </button>
         <button
           v-if="farmerState === 'unstaked'"
@@ -51,7 +51,7 @@
           End cooldown
         </button>
         <button class="nes-btn is-warning" @click="claim">
-          Claim {{ availableA }} $HALO
+          Claim {{ availableA /1000000000}} $HALO
         </button>
       </Vault>
     </div>

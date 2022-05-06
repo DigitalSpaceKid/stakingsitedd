@@ -1,6 +1,6 @@
 <template>
   <!--control buttons-->
-  <div class="mb-10 flex justify-center">
+  <div class="mb-5 flex justify-center">
     <button
       v-if="
         (toWalletNFTs && toWalletNFTs.length) ||
@@ -9,7 +9,7 @@
       class="nes-btn is-primary mr-5"
       @click="moveNFTsOnChain"
     >
-      Move Gems!
+      Move Dogs!
     </button>
     <slot />
   </div>
@@ -28,12 +28,13 @@
     <div class="m-2 flex flex-col">
       <ArrowButton
         :disabled="vaultLocked"
-        class="my-2"
+        class="my-5"
         @click="moveNFTsFE(false)"
       />
+      <p class="mt-10"> </p>
       <ArrowButton
         :disabled="vaultLocked"
-        class="my-2"
+        class="my-5"
         :left="true"
         @click="moveNFTsFE(true)"
       />
@@ -51,7 +52,7 @@
         v-if="vaultLocked"
         class="locked flex-col justify-center items-center align-center"
       >
-        <p class="mt-10">This vault is locked!</p>
+        <p class="mt-10">Your NFTs are staked!</p>
       </div>
     </NFTGrid>
   </div>
